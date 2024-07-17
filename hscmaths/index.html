@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-
   <head>
     <style>
       a {
         text-decoration: none;
+        float: left;
       }
 
       .content {
@@ -28,10 +28,9 @@
         background-color: #071c39;
         position: absolute;
         inset: 0;
-        display: flex;
-        place-content: center;
-        align-items: center;
         overflow: hidden;
+        margin: none;
+        padding: none;
       }
 
       body {
@@ -48,59 +47,89 @@
         bottom: -50%;
         width: 200%;
         height: 200vh;
-        background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
+        background: transparent
+          url("http://assets.iceable.com/img/noise-transparent.png") repeat 0 0;
         background-repeat: repeat;
-        animation: bg-animation .2s infinite;
-        opacity: .9;
+        animation: bg-animation 0.2s infinite;
+        opacity: 0.9;
         visibility: visible;
       }
 
       @keyframes bg-animation {
         0% {
-          transform: translate(0, 0)
+          transform: translate(0, 0);
         }
 
         10% {
-          transform: translate(-5%, -5%)
+          transform: translate(-5%, -5%);
         }
 
         20% {
-          transform: translate(-10%, 5%)
+          transform: translate(-10%, 5%);
         }
 
         30% {
-          transform: translate(5%, -10%)
+          transform: translate(5%, -10%);
         }
 
         40% {
-          transform: translate(-5%, 15%)
+          transform: translate(-5%, 15%);
         }
 
         50% {
-          transform: translate(-10%, 5%)
+          transform: translate(-10%, 5%);
         }
 
         60% {
-          transform: translate(15%, 0)
+          transform: translate(15%, 0);
         }
 
         70% {
-          transform: translate(0, 10%)
+          transform: translate(0, 10%);
         }
 
         80% {
-          transform: translate(-15%, 0)
+          transform: translate(-15%, 0);
         }
 
         90% {
-          transform: translate(10%, 5%)
+          transform: translate(10%, 5%);
         }
 
         100% {
-          transform: translate(5%, 0)
+          transform: translate(5%, 0);
         }
       }
 
+      a:hover {
+        color: #fff;
+      }
+
+      h1:before {
+        content: "HSC Maths";
+      }
+
+      h1 {
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+
+        background-image: linear-gradient(270deg, #553c9a, #ee4b2b);
+        background-size: 200% 200%;
+        animation: gradient 23s ease infinite;
+      }
+
+      @keyframes gradient {
+        0% {
+          background-position: 0% 82%;
+        }
+        50% {
+          background-position: 100% 19%;
+        }
+        100% {
+          background-position: 0% 82%;
+        }
+      }
     </style>
   </head>
 
@@ -108,29 +137,92 @@
     <div class="bg"></div>
 
     <div class="content">
-      <h1>
-        HSC Maths Resources
-      </h1>
+      <h1 id="heading">Resources</h1>
       <div class="links">
         <ul>
-          <li><a href="https://4unitmaths.com/me2.html">loads of past papers for extension 1 and 2</a></li>
-          <li><a href="https://thsconline.github.io/s/yr12/Maths/">loads of past papers for extension 1 and 2</a></li>
-          <li><a href="https://howardmathematics.com/wp-content/uploads/2023/07/1000-Extension-2-Revision-Questions-v6-September-13-2021.pdf">1000 revision questions for extension 2</a></li>
-          <li><a href="https://hscmathsbytopic.herokuapp.com/paper/4U">practice test creator from past hsc questions</a></li>
-          <li><a href="https://www.boredofstudies.org/resources/bos-trial-mathematics-extension-2-2012-2022-exams-and-solutions.17485/download">bored of studies extension 2 trial papers</a></li>
-          <li><a href="https://www.studocu.com/en-au/course/math-extension-1/6185216?origin=pop-page">extension 1 notes + past papers</a></li>
-          <li><a href="https://www.studocu.com/en-au/document/st-ives-high-school/math-extension-2/mathematics-extension-2-year-12-topic-guide-mechanics/49056761?origin=high-school-course-page">mechanics notes</a></li>
-          <li><a href="https://www.studocu.com/en-au/document/knox-grammar-school/math-extension-2/tips-for-integration-questions/92992987?origin=high-school-course-page">integration tips</a></li>
-          <li><a href="https://www.studocu.com/en-au/document/model-farms-high-school/math-extension-2/nesa-written-4-unit-questions/96732062?origin=high-school-course-page">nesa sample questions</a></li>
-          <li><a href="https://www.studocu.com/en-au/course/mathematics-extension-2/6325134?origin=pop-page">extension 2 topic summaries</a></li>
-          <li><a href="https://www.studocu.com/en-au/course/mathematics-extension-1/5932917?origin=pop-page">extension 1 notes + practice</a></li>
-          <li><a href="https://www.studocu.com/en-au/document/penrith-high-school/maths-ext-2/checklist-for-final-exam-ext-24u-math/99907292?origin=course-new-1">final extension 2 checklist</a></li>
-          <li><a href="https://www.youtube.com/watch?v=16wWDmZk2-M&list=PLa3QzkkqYUFlamTb1aaQQ9Jd0kKQ1XC27&pp=iAQB">mcgrathematics extension 2 revision playlist</a></li>
-          <li><a href="https://www.youtube.com/watch?v=-I_X8E7D3Qs&list=PLa3QzkkqYUFm6_1nTQ-BOszuabfukgXbG&pp=iAQB">mcgrathematics extension 1 revision playlist</a></li>
+          <li>
+            <a href="https://4unitmaths.com/me2.html"
+              >loads of past papers for extension 1 and 2</a
+            >
+          </li>
+          <li>
+            <a href="https://thsconline.github.io/s/yr12/Maths/"
+              >loads of past papers for extension 1 and 2</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://howardmathematics.com/wp-content/uploads/2023/07/1000-Extension-2-Revision-Questions-v6-September-13-2021.pdf"
+              >1000 revision questions for extension 2</a
+            >
+          </li>
+          <li>
+            <a href="https://hscmathsbytopic.herokuapp.com/paper/4U"
+              >practice test creator from past hsc questions</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.boredofstudies.org/resources/bos-trial-mathematics-extension-2-2012-2022-exams-and-solutions.17485/download"
+              >bored of studies extension 2 trial papers</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.studocu.com/en-au/course/math-extension-1/6185216?origin=pop-page"
+              >extension 1 notes + past papers</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.studocu.com/en-au/document/st-ives-high-school/math-extension-2/mathematics-extension-2-year-12-topic-guide-mechanics/49056761?origin=high-school-course-page"
+              >mechanics notes</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.studocu.com/en-au/document/knox-grammar-school/math-extension-2/tips-for-integration-questions/92992987?origin=high-school-course-page"
+              >integration tips</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.studocu.com/en-au/document/model-farms-high-school/math-extension-2/nesa-written-4-unit-questions/96732062?origin=high-school-course-page"
+              >nesa sample questions</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.studocu.com/en-au/course/mathematics-extension-2/6325134?origin=pop-page"
+              >extension 2 topic summaries</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.studocu.com/en-au/course/mathematics-extension-1/5932917?origin=pop-page"
+              >extension 1 notes + practice</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.studocu.com/en-au/document/penrith-high-school/maths-ext-2/checklist-for-final-exam-ext-24u-math/99907292?origin=course-new-1"
+              >final extension 2 checklist</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.youtube.com/watch?v=16wWDmZk2-M&list=PLa3QzkkqYUFlamTb1aaQQ9Jd0kKQ1XC27&pp=iAQB"
+              >mcgrathematics extension 2 revision playlist</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.youtube.com/watch?v=-I_X8E7D3Qs&list=PLa3QzkkqYUFm6_1nTQ-BOszuabfukgXbG&pp=iAQB"
+              >mcgrathematics extension 1 revision playlist</a
+            >
+          </li>
         </ul>
-
       </div>
     </div>
   </body>
-
 </html>
