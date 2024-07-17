@@ -105,7 +105,12 @@
         color: #fff;
       }
 
+      h1:before {
+        content: "HSC Maths";
+      }
+
       h1 {
+        //background-image: linear-gradient(45deg, #553c9a 45%, #ee4b2b);
         color: transparent;
         background-clip: text;
         -webkit-background-clip: text;
@@ -126,14 +131,58 @@
           background-position: 0% 82%;
         }
       }
+
+      :root {
+        --blob-color: linear-gradient(to right, aquamarine, mediumpurple);
+        --blob-size: 400px;
+      }
+
+      #blob {
+        pointer-events: none;
+        animation: rotate360 20s infinite;
+        background: var(--blob-color);
+        filter: blur(calc(var(--blob-size) / 2.15));
+
+        width: var(--blob-size);
+        height: var(--blob-size);
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        translate: -50% -50%;
+        border-radius: 50%;
+      }
+
+      @keyframes rotate360 {
+        from {
+          rotate: 0deg;
+        }
+        50% {
+          scale: 1 1.15;
+        }
+        to {
+          rotate: 360deg;
+        }
+      }
+
+      #blob-blur {
+        pointer-events: none;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 2;
+        backdrop-filter: blur;
+      }
     </style>
   </head>
 
   <body>
     <div class="bg"></div>
 
+    <div id="blob"></div>
+    <div id="blob-blur"></div>
+
     <div class="content">
-      <h1 id="heading">HSC Maths Resources</h1>
+      <h1 id="heading">Resources</h1>
       <div class="links">
         <ul>
           <li>
@@ -220,5 +269,22 @@
         </ul>
       </div>
     </div>
+    <script>
+      
+const blob = document.getElementById('blob');
+
+document.body.onpointermove = event => {
+	const { clientX, clientY } = event;
+	
+	blob.animate({
+		left: `${clientX}px`,
+		top: `${clientY}px`
+	}, {
+		duration: 3000,
+		fill: 'forwards'
+	});
+}
+
+    </script>
   </body>
 </html>
