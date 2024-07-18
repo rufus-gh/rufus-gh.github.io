@@ -101,23 +101,9 @@
         }
       }
 
-      a:hover {
+      a:hover,
+      h1:hover {
         color: #fff;
-      }
-
-      h1:before {
-        content: "HSC Maths";
-      }
-
-      h1 {
-        //background-image: linear-gradient(45deg, #553c9a 45%, #ee4b2b);
-        color: transparent;
-        background-clip: text;
-        -webkit-background-clip: text;
-
-        background-image: linear-gradient(270deg, #553c9a, #ee4b2b);
-        background-size: 200% 200%;
-        animation: gradient 23s ease infinite;
       }
 
       @keyframes gradient {
@@ -182,7 +168,7 @@
     <div id="blob-blur"></div>
 
     <div class="content">
-      <h1 id="heading">Resources</h1>
+      <h1 id="heading">HSC Maths Resources</h1>
       <div class="links">
         <ul>
           <li>
@@ -270,21 +256,22 @@
       </div>
     </div>
     <script>
-      
-const blob = document.getElementById('blob');
+      const blob = document.getElementById("blob");
 
-document.body.onpointermove = event => {
-	const { clientX, clientY } = event;
-	
-	blob.animate({
-		left: `${clientX}px`,
-		top: `${clientY}px`
-	}, {
-		duration: 3000,
-		fill: 'forwards'
-	});
-}
+      document.body.onpointermove = (event) => {
+        const { clientX, clientY } = event;
 
+        blob.animate(
+          {
+            left: `${clientX}px`,
+            top: `${clientY}px`,
+          },
+          {
+            duration: 3000,
+            fill: "forwards",
+          }
+        );
+      };
     </script>
   </body>
 </html>
