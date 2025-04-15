@@ -247,5 +247,29 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-database-compat.js"></script>  
+    <script>
+        const firebaseConfig = {
+        apiKey: "AIzaSyBHAJskDBYaE_w55avEgpf0vH0h2imjJSE",
+        authDomain: "visitor-counter-39f8c.firebaseapp.com",
+        databaseURL: "https://visitor-counter-39f8c-default-rtdb.asia-southeast1.firebasedatabase.app",
+        projectId: "visitor-counter-39f8c",
+        storageBucket: "visitor-counter-39f8c.firebasestorage.app",
+        messagingSenderId: "92920301244",
+        appId: "1:92920301244:web:ec05ac6e804f615c5872b9",
+        measurementId: "G-86RV598MRS"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.database();
+        const counterRef = db.ref("visitorCount");
+
+        // Increment without reading value
+        counterRef.transaction(current => {
+        return (current || 0) + 1;
+        });
+    </script>
 </body>
 </html>
