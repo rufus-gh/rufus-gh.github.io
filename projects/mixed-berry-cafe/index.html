@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mixed Berry Cafe | Fresh & Delicious</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="description" content="Mixed Berry Cafe - A cozy spot for coffee, fresh pastries, and berry-inspired delights.">
+</head>
+<body>
+    <header id="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="#">
+                        <span class="berry">Mixed Berry</span>
+                        <span class="cafe">CAFÉ</span>
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">Our Story</a></li>
+                    <li class="nav-item"><a href="#menu" class="nav-link">Menu</a></li>
+                    <li class="nav-item"><a href="#special" class="nav-link">Specials</a></li>
+                    <li class="nav-item"><a href="#gallery" class="nav-link">Gallery</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="mobile-nav-btn">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to <span>Mixed Berry</span> Café</h1>
+            <p>Where flavor meets freshness in every bite & sip</p>
+            <div class="hero-buttons">
+                <a href="#menu" class="btn primary-btn">Explore Menu</a>
+                <a href="#contact" class="btn secondary-btn">Find Us</a>
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-coffee"></i>
+                    </div>
+                    <h3>Premium Coffee</h3>
+                    <p>Ethically sourced beans, expertly roasted and prepared with care</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-birthday-cake"></i>
+                    </div>
+                    <h3>Fresh Pastries</h3>
+                    <p>Baked daily in-house using only the finest ingredients</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Organic Berries</h3>
+                    <p>Locally sourced, seasonal berries in all our signature dishes</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <h3>Free WiFi</h3>
+                    <p>Fast and reliable internet for work or leisure</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="Mixed Berry Cafe Interior">
+                    <div class="years-badge">
+                        <span>5+</span>
+                        <small>Years of Excellence</small>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <div class="section-header">
+                        <span class="subtitle">Our Story</span>
+                        <h2>A Berry Special Place</h2>
+                        <div class="separator"></div>
+                    </div>
+                    <p>Mixed Berry Café was born from a passion for quality coffee and the natural sweetness of fresh berries. Founded in 2020, our café has grown from a small corner shop to a beloved community gathering space.</p>
+                    <p>We believe in creating a warm, welcoming environment where friends meet, remote workers find inspiration, and berry enthusiasts discover new flavor combinations.</p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>100% Organic Ingredients</span>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Sustainably Sourced Coffee</span>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Family Owned Business</span>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Community Focused</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn primary-btn">Visit Us Today</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="menu">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="subtitle">Explore Our Menu</span>
+                <h2>Berry Delicious Offerings</h2>
+                <div class="separator"></div>
+                <p>From signature berry-infused coffees to freshly baked pastries, discover our seasonal menu</p>
+            </div>
+
+            <div class="menu-tabs">
+                <button class="menu-tab active" data-category="drinks">Drinks</button>
+                <button class="menu-tab" data-category="pastries">Pastries</button>
+                <button class="menu-tab" data-category="breakfast">Breakfast</button>
+                <button class="menu-tab" data-category="lunch">Lunch</button>
+            </div>
+
+            <div class="menu-items-container">
+                <!-- Drinks Menu -->
+                <div class="menu-category active" data-category="drinks">
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="menu-item-img">
+                                <img src="https://images.unsplash.com/photo-1577968897966-3d4325b36b61?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Berry Bliss Latte">
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-title">
+                                    <h3>Berry Bliss Latte</h3>
+                                    <span class="price">$4.95</span>
+                                </div>
+                                <p>Our signature espresso blended with steamed milk and mixed berry syrup</p>
+                            </div>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="menu-item-img">
+                                <img src="https://images.unsplash.com/photo-1546549032-9571cd6b27df?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Raspberry Mocha">
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-title">
+                                    <h3>Raspberry Mocha</h3>
+                                    <span class="price">$5.25</span>
+                                </div>
+                                <p>Espresso with chocolate and raspberry flavors, topped with whipped cream</p>
+                            </div>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="menu-item-img">
+                                <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Mixed Berry Smoothie">
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-title">
+                                    <h3>Mixed Berry Smoothie</h3>
+                                    <span class="price">$6.50</span>
+                                </div>
+                                <p>Strawberry, blueberry, raspberry, and blackberry blended with yogurt</p>
+                            </div>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="menu-item-img">
+                                <img src="https://images.unsplash.com/photo-1572099606223-6e29045d7de3?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Berry Tea Infusion">
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-title">
+                                    <h3>Berry Tea Infusion</h3>
+                                    <span class="price">$4.25</span>
+                                </div>
+                                <p>Premium black tea with fresh berries and a hint of mint</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pastries Menu -->
+                <div class="menu-category" data-category="pastries">
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="menu-item-img">
+                                <img src="https://images.unsplash.com/photo-1505253304499-671c55fb57fe?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Mixed Berry Muffin">
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-title">
+                                    <h3>Mixed Berry Muffin</h3>
+                                    <span class="price">$3.95</span>
+                                </div>
+                                <p>Fresh berry muffin with streusel topping and a touch of lemon zest</p>
+                            </div>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="menu-item-img">
+                                <img src="https://images.unsplash.com/photo-1558326567-98166332163b?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Berry Cheesecake">
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-title">
+                                    <h3>Berry Cheesecake</h3>
+                                    <span class="price">$5.95</span>
+                                </div>
+                                <p>Creamy vanilla cheesecake topped with mixed berry compote</p>
+                            </div>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="menu-item-img">
+                                <img src="https://images.unsplash.com/photo-1587248720327-8eb72564be1e?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Berry Danish">
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-title">
+                                    <h3>Berry Danish</h3>
+                                    <span class="price">$4.25</span>
+                                </div>
+                                <p>Buttery Danish pastry filled with fresh berries and cream cheese</p>
+                            </div>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="menu-item-img">
+                                <img src="https://images.unsplash.com/photo-1549007953-2f2dc0b24019?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Chocolate Berry Tart">
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-title">
+                                    <h3>Chocolate Berry Tart</h3>
+                                    <span class="price">$5.50</span>
+                                </div>
+                                <p>Rich chocolate ganache tart topped with fresh mixed berries</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Breakfast Menu -->
+                <div class="menu-category" data-category="breakfast">
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="menu-item-img">
+                                <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Berry Pancakes">
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-title">
+                                    <h3>Berry Pancakes</h3>
+                                    <span class="price">$8.95</span>
+                                </div>
+                                <p>Fluffy pancakes topped with mixed berries and maple syrup</p>
+                            </div>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="menu-item-img">
+                                <img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Berry Yogurt Bowl">
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-title">
+                                    <h3>Berry Yogurt Bowl</h3>
+                                    <span class="price">$7.50</span>
+                                </div>
+                                <p>Greek yogurt with fresh berries, honey, and granola</p>
+                            </div>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="menu-item-img">
+                                <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Avocado Berry Toast">
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-title">
+                                    <h3>Avocado Berry Toast</h3>
+                                    <span class="price">$9.25</span>
+                                </div>
+                                <p>Sourdough toast with avocado, mixed berries, honey, and feta</p>
+                            </div>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="menu-item-img">
+                                <img src="https://images.unsplash.com/photo-1615485290382-441e4d049cb5?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Berry Oatmeal">
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-title">
+                                    <h3>Berry Oatmeal</h3>
+                                    <span class="price">$6.95</span>
+                                </div>
+                                <p>Steel-cut oats with mixed berries, brown sugar, and cinnamon</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lunch Menu -->
+                <div class="menu-category" data-category="lunch">
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="menu-item-img">
+                                <img src="https://images.unsplash.com/photo-1547496502-affa22d38842?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Berry Chicken Salad">
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-title">
+                                    <h3>Berry Chicken Salad</h3>
+                                    <span class="price">$11.95</span>
+                                </div>
+                                <p>Mixed greens with grilled chicken, strawberries, blueberries, and balsamic</p>
+                            </div>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="menu-item-img">
+                                <img src="https://images.unsplash.com/photo-1550507992-eb63ffee0847?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Turkey Berry Sandwich">
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-title">
+                                    <h3>Turkey Berry Sandwich</h3>
+                                    <span class="price">$10.50</span>
+                                </div>
+                                <p>Turkey with cranberry sauce, berry chutney, and cream cheese on multigrain</p>
+                            </div>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="menu-item-img">
+                                <img src="https://images.unsplash.com/photo-1551248429-40975aa4de74?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Berry & Brie Wrap">
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-title">
+                                    <h3>Berry & Brie Wrap</h3>
+                                    <span class="price">$9.95</span>
+                                </div>
+                                <p>Brie cheese, mixed berries, arugula, and honey mustard wrapped in flour tortilla</p>
+                            </div>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="menu-item-img">
+                                <img src="https://images.unsplash.com/photo-1603105037243-69e3b6193f79?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Berry Quinoa Bowl">
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-title">
+                                    <h3>Berry Quinoa Bowl</h3>
+                                    <span class="price">$10.95</span>
+                                </div>
+                                <p>Quinoa with roasted vegetables, fresh berries, nuts, and lemon vinaigrette</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="special" class="special">
+        <div class="container">
+            <div class="special-grid">
+                <div class="special-content">
+                    <div class="section-header">
+                        <span class="subtitle">Special Offer</span>
+                        <h2>Berry Breakfast Bundle</h2>
+                        <div class="separator"></div>
+                    </div>
+                    <p>Start your day with our Berry Best deal! Enjoy any berry coffee drink, a freshly baked mixed berry muffin, and a small fruit cup for one special price.</p>
+                    <div class="special-price">
+                        <span class="old-price">$13.85</span>
+                        <span class="new-price">$10.99</span>
+                    </div>
+                    <p class="special-time"><i class="far fa-clock"></i> Available Monday - Friday, 7am - 11am</p>
+                    <a href="#" class="btn primary-btn">Order Now</a>
+                </div>
+                <div class="special-image">
+                    <img src="https://images.unsplash.com/photo-1495214783159-3503f1add44a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="Berry Breakfast Bundle">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="subtitle">Our Gallery</span>
+                <h2>Beautiful Moments at Mixed Berry</h2>
+                <div class="separator"></div>
+                <p>Take a look at our cozy cafe atmosphere and delicious creations</p>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Cafe Interior">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1593978564056-ac5c31c24d96?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Berry Latte Art">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Berry Tarts">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1641896930326-24689fd9c529?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Coffee Brewing">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1542181961-9590d0c79dab?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Berry Smoothie">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1550476915-b48e0bee0c1f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Cafe Corner">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lightbox -->
+        <div class="lightbox">
+            <span class="lightbox-close">&times;</span>
+            <img class="lightbox-img" src="">
+            <div class="lightbox-nav">
+                <button class="lightbox-prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="lightbox-next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="subtitle">Customer Reviews</span>
+                <h2>What People Say About Us</h2>
+                <div class="separator"></div>
+            </div>
+
+            <div class="testimonial-slider">
+                <div class="testimonial-track">
+                    <div class="testimonial-item">
+                        <div class="testimonial-content">
+                            <i class="fas fa-quote-left"></i>
+                            <p>"The Berry Bliss Latte is simply amazing! I've never tasted anything like it. The staff is friendly and the atmosphere is perfect for both working and relaxing."</p>
+                            <div class="testimonial-author">
+                                <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Emma Wilson">
+                                <div class="author-info">
+                                    <h4>Emma Wilson</h4>
+                                    <span>Regular Customer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-item">
+                        <div class="testimonial-content">
+                            <i class="fas fa-quote-left"></i>
+                            <p>"Mixed Berry Cafe has become my go-to spot for breakfast meetings. Their berry pancakes are to die for, and the free WiFi is fast and reliable."</p>
+                            <div class="testimonial-author">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="David Chang">
+                                <div class="author-info">
+                                    <h4>David Chang</h4>
+                                    <span>Local Business Owner</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-item">
+                        <div class="testimonial-content">
+                            <i class="fas fa-quote-left"></i>
+                            <p>"I appreciate how they source local ingredients. The Berry Quinoa Bowl is my favorite healthy lunch option in the area. Always fresh and delicious!"</p>
+                            <div class="testimonial-author">
+                                <img src="https://randomuser.me/api/portraits/women/42.jpg" alt="Sarah Miller">
+                                <div class="author-info">
+                                    <h4>Sarah Miller</h4>
+                                    <span>Fitness Instructor</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slider-nav">
+                    <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+                    <div class="slider-dots"></div>
+                    <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="subtitle">Find Us</span>
+                <h2>Visit Our Cafe</h2>
+                <div class="separator"></div>
+                <p>We'd love to see you in person! Stop by for a delicious experience.</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Our Location</h3>
+                            <p>123 Berry Street<br>Portland, OR 97205</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Opening Hours</h3>
+                            <p>Monday - Friday: 7AM - 8PM<br>Saturday & Sunday: 8AM - 9PM</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Contact Us</h3>
+                            <p>Phone: (503) 555-0123<br>Email: hello@mixedberrycafe.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-yelp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-map">
+                    <!-- In a real project, this would be an embedded Google Map -->
+                    <img src="https://maps.googleapis.com/maps/api/staticmap?center=Portland+OR&zoom=14&size=600x400&key=YOUR_API_KEY" alt="Map" class="map-placeholder">
+                    <div class="map-overlay">
+                        <p>Interactive map would be displayed here<br>with an actual Google Maps API key</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h3>Subscribe to Our Newsletter</h3>
+                    <p>Get updates on seasonal specials, events, and exclusive offers</p>
+                </div>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your Email Address" required>
+                    <button type="submit" class="btn primary-btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <div class="footer-logo">
+                        <a href="#">
+                            <span class="berry">Mixed Berry</span>
+                            <span class="cafe">CAFÉ</span>
+                        </a>
+                    </div>
+                    <p>A cozy cafe serving premium coffee and berry-inspired delights in a warm, welcoming environment.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-yelp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#about">Our Story</a></li>
+                        <li><a href="#special">Special Offers</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Berry Street, Portland</li>
+                        <li><i class="fas fa-phone-alt"></i> (503) 555-0123</li>
+                        <li><i class="fas fa-envelope"></i> hello@mixedberrycafe.com</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-hours">
+                    <h4>Opening Hours</h4>
+                    <ul>
+                        <li><span>Monday - Friday:</span> 7AM - 8PM</li>
+                        <li><span>Saturday & Sunday:</span> 8AM - 9PM</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Mixed Berry Café. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#top" id="back-to-top"><i class="fas fa-chevron-up"></i></a>
+
+    <script src="script.js"></script>
+</body>
+</html>

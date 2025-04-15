@@ -1,313 +1,253 @@
-<html>
-  <head>
-    <style>
-    body {
-    background-color: #000;
-    margin: 0;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rufus | Software Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="description" content="Professional portfolio of Rufus, a software developer">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="/">rufus-gh</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
 
-#container {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
+    <section class="hero">
+        <div class="container">
+            <h1>Hello, I'm <span class="highlight">Rufus</span></h1>
+            <h2>Software Developer</h2>
+            <p>I build elegant solutions to complex problems</p>
+            <div class="cta-buttons">
+                <a href="#projects" class="btn primary-btn">View My Work</a>
+                <a href="#contact" class="btn secondary-btn">Get In Touch</a>
+            </div>
+        </div>
+    </section>
 
-canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm a passionate software developer with expertise in building modern web applications. I love creating clean, efficient code and user-friendly interfaces.</p>
+                    <p>With a strong foundation in both front-end and back-end technologies, I enjoy tackling challenging problems and continuously expanding my skill set.</p>
+                    <p>When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or enjoying outdoor activities.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1618477247222-acbdb0e159b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Code editor" class="profile-pic">
+                </div>
+            </div>
+        </div>
+    </section>
 
-.label {
-    font-size: 1.25em;
-    font-family: monospace;
-    margin-left: 4px;
-}
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Mixed Berry Cafe">
+                    </div>
+                    <div class="project-info">
+                        <h3>Mixed Berry Cafe</h3>
+                        <p>A modern cafe website with elegant UI elements, interactive features, and responsive design. Includes menu showcase, image gallery, testimonial slider, and contact form.</p>
+                        <div class="project-tags">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                            <span>Responsive Design</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/rufus-gh/mixed-berry-cafe" target="_blank"><i class="fab fa-github"></i> Code</a>
+                            <a href="projects/mixed-berry-cafe/index.html" target="_blank"><i class="fas fa-external-link-alt"></i> Live</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80" alt="Recipe Finder">
+                    </div>
+                    <div class="project-info">
+                        <h3>Recipe Finder</h3>
+                        <p>A static web application featuring a collection of recipes with search and filter functionality. Users can browse recipes by category and view detailed instructions.</p>
+                        <div class="project-tags">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/rufus-gh/recipe-finder" target="_blank"><i class="fab fa-github"></i> Code</a>
+                            <a href="projects/recipe-finder/index.html" target="_blank"><i class="fas fa-external-link-alt"></i> Live</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80" alt="Portfolio Gallery">
+                    </div>
+                    <div class="project-info">
+                        <h3>Portfolio Gallery</h3>
+                        <p>An interactive photo gallery with lightbox functionality, filtering by categories, and search capabilities. Features both grid and list viewing options.</p>
+                        <div class="project-tags">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/rufus-gh/portfolio-gallery" target="_blank"><i class="fab fa-github"></i> Code</a>
+                            <a href="projects/portfolio-gallery/index.html" target="_blank"><i class="fas fa-external-link-alt"></i> Live</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1534088568595-a066f410bcda?auto=format&fit=crop&w=800&q=80" alt="Weather Dashboard">
+                    </div>
+                    <div class="project-info">
+                        <h3>Weather Dashboard</h3>
+                        <p>A responsive weather application that provides current conditions and forecasts based on user location. Features an interactive weather map and location saving.</p>
+                        <div class="project-tags">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                            <span>Weather API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/rufus-gh/weather-dashboard" target="_blank"><i class="fab fa-github"></i> Code</a>
+                            <a href="projects/weather-dashboard/index.html" target="_blank"><i class="fas fa-external-link-alt"></i> Live</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?auto=format&fit=crop&w=800&q=80" alt="Business Template">
+                    </div>
+                    <div class="project-info">
+                        <h3>Business Template</h3>
+                        <p>A professional business website template with modern design elements, animations, and responsive layout. Features service showcases, testimonials, and contact forms.</p>
+                        <div class="project-tags">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                            <span>Responsive Design</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/rufus-gh/business-template" target="_blank"><i class="fab fa-github"></i> Code</a>
+                            <a href="projects/business-template/index.html" target="_blank"><i class="fas fa-external-link-alt"></i> Live</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-.math {
-    color: #f0f;
-}
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills & Technologies</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <ul class="skill-list">
+                        <li>HTML5/CSS3</li>
+                        <li>JavaScript (ES6+)</li>
+                        <li>Responsive Design</li>
+                        <li>CSS Animation</li>
+                        <li>SASS/SCSS</li>
+                        <li>Bootstrap/Tailwind</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>JavaScript</h3>
+                    <ul class="skill-list">
+                        <li>DOM Manipulation</li>
+                        <li>Fetch API / AJAX</li>
+                        <li>JSON Management</li>
+                        <li>ES6+ Features</li>
+                        <li>Local Storage</li>
+                        <li>Event Handling</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Others</h3>
+                    <ul class="skill-list">
+                        <li>Git & GitHub</li>
+                        <li>Responsive Design</li>
+                        <li>Static Site Deployment</li>
+                        <li>Cross-Browser Testing</li>
+                        <li>Web Performance</li>
+                        <li>Web Accessibility</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-.physics {
-    color: #0ff;
-}</style>
-  </head>
-<body><div id="container">
-  <div class="math label">math</div>
-  <div class="physics label">physics</div>
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>rufus.gordonheywood@gmail.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <p><a href="https://github.com/rufus-gh" target="_blank">github.com/rufus-gh</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Remote / Worldwide</p>
+                    </div>
+                </div>
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn primary-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
 
-  <canvas id="drawing_canvas"></canvas>
-</div>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Rufus. All Rights Reserved.</p>
+                <div class="social-icons">
+                    <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-
-<script src="//cdnjs.cloudflare.com/ajax/libs/p2.js/0.6.0/p2.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5/dat.gui.min.js"></script>
-  <script>// double pendulum math from https://github.com/micaeloliveira/physics-sandbox/blob/feature/new-styling/assets/javascripts/pendulum.js
-
-// canvas settings
-var viewWidth = window.innerWidth,
-    viewHeight = window.innerHeight,
-    drawingCanvas = document.getElementById("drawing_canvas"),
-    ctx,
-    timeStep = (1/60),
-    time = 0;
-
-// pendulum
-var mass1 = 10,
-    mass2 = 10,
-    mu = 0,
-    Theta1 = Math.PI * 0.5,
-    Theta2 = Math.PI * 0.5,
-    d2Theta1 = 0,
-    d2Theta2 = 0,
-    dTheta1 = 0,
-    dTheta2 = 0,
-    length1 = 120,
-    length2 = 120,
-    anchorX = viewWidth * 0.5,
-    anchorY = viewHeight * 0.3,
-    g = 9.8;
-
-// physics
-var world,
-    body0, // anchor
-    body1, // top circle
-    body2, // bottom circle
-    dc1,
-    dc2,
-    physicsScale = 32;
-
-var mathTimeScale = 5.6;
-
-// graphics
-var circ1, circ2, circ3, circ4,
-    line1, line2, line3, line4,
-    trail1, trail2;
-
-function initDrawingCanvas() {
-    drawingCanvas.width = viewWidth;
-    drawingCanvas.height = viewHeight;
-    ctx = drawingCanvas.getContext('2d');
-}
-
-function initGraphics() {
-    // math
-    circ1 = {x: anchorX + length1 * Math.sin(Theta1), y: anchorY+length1*Math.cos(Theta1), radius: mass1};
-    circ2 = {x: anchorX + length1 * Math.sin(Theta1) + length2 * Math.sin(Theta2), y: anchorY + length1 * Math.cos(Theta1) + length2 * Math.cos(Theta2), radius: mass2};
-    line1 = {x0: anchorX, y0: anchorY, x: 0, y: 0};
-    line2 = {x0: 0, y0: 0, x: 0, y: 0};
-    // physics (values will be set by the physics engine)
-    circ3 = {x:0, y:0, radius:1};
-    circ4 = {x:0, y:0, radius:1};
-    line3 = {x0: 0, y0: 0, x: 0, y: 0};
-    line4 = {x0: 0, y0: 0, x: 0, y: 0};
-
-    trail1 = [];
-    trail2 = [];
-}
-
-function initPhysics() {
-    world = new p2.World({gravity:[0, -g]});
-
-    var px = anchorX / physicsScale;
-    var py = (viewHeight - anchorY) / physicsScale;
-    var r1 = mass1 / physicsScale;
-    var r2 = mass2 / physicsScale;
-
-    body0 = new p2.Body({mass:0, position:[px, py]});
-    px += length1 / physicsScale;
-
-    body1 = new p2.Body({mass:1, position:[px, py]});
-    body1.addShape(new p2.Circle(r1));
-    px += length2 / physicsScale;
-
-    body2 = new p2.Body({mass:1, position:[px, py]});
-    body2.addShape(new p2.Circle(r2));
-
-    dc1 = new p2.DistanceConstraint(body0, body1, {distance:length1 / physicsScale});
-    dc2 = new p2.DistanceConstraint(body1, body2, {distance:length2 / physicsScale});
-
-    body1.damping = body2.damping = 0;
-    body1.angularDamping = body2.angularDamping = 0;
-
-    world.addBody(body0);
-    world.addBody(body1);
-    world.addBody(body2);
-    world.addConstraint(dc1);
-    world.addConstraint(dc2);
-
-    // sync static values between bodies and corresponding graphics
-    line3.x0 = body0.position[0];
-    line3.y0 = body0.position[1];
-    circ3.radius = r1;
-    circ4.radius = r2;
-}
-
-function update() {
-    // MATH
-    var dt = timeStep * mathTimeScale;
-    mu        =  1 + mass1 / mass2;
-    d2Theta1  =  (g*(Math.sin(Theta2)*Math.cos(Theta1-Theta2)-mu*Math.sin(Theta1))-(length2*dTheta2*dTheta2+length1*dTheta1*dTheta1*Math.cos(Theta1-Theta2))*Math.sin(Theta1-Theta2))/(length1*(mu-Math.cos(Theta1-Theta2)*Math.cos(Theta1-Theta2)));
-    d2Theta2  =  (mu*g*(Math.sin(Theta1)*Math.cos(Theta1-Theta2)-Math.sin(Theta2))+(mu*length1*dTheta1*dTheta1+length2*dTheta2*dTheta2*Math.cos(Theta1-Theta2))*Math.sin(Theta1-Theta2))/(length2*(mu-Math.cos(Theta1-Theta2)*Math.cos(Theta1-Theta2)));
-    dTheta1   += d2Theta1 * dt;
-    dTheta2   += d2Theta2 * dt;
-    Theta1    += dTheta1 * dt;
-    Theta2    += dTheta2 * dt;
-
-    circ1.x = anchorX+length1*Math.sin(Theta1);
-    circ1.y = anchorY+length1*Math.cos(Theta1);
-    circ2.x = anchorX+length1*Math.sin(Theta1)+length2*Math.sin(Theta2);
-    circ2.y = anchorY+length1*Math.cos(Theta1)+length2*Math.cos(Theta2);
-
-    line1.x  = circ1.x;
-    line1.y  = circ1.y;
-    line2.x0 = circ1.x;
-    line2.y0 = circ1.y;
-    line2.x  = circ2.x;
-    line2.y  = circ2.y;
-
-    trail1.unshift({x:circ2.x, y:circ2.y});
-    if (trail1.length > 2048) trail1.pop();
-
-    // PHYSICS
-    world.step(timeStep);
-
-    circ3.x = body1.position[0];
-    circ3.y = body1.position[1];
-    circ4.x = body2.position[0];
-    circ4.y = body2.position[1];
-
-    line3.x  = circ3.x;
-    line3.y  = circ3.y;
-    line4.x0 = circ3.x;
-    line4.y0 = circ3.y;
-    line4.x  = circ4.x;
-    line4.y  = circ4.y;
-
-    trail2.unshift({x:circ4.x, y:circ4.y});
-    if (trail2.length > 2048) trail2.pop();
-}
-
-function draw() {
-    // clear
-    ctx.clearRect(0, 0, viewWidth, viewHeight);
-
-    ctx.fillStyle = '#fff';
-    ctx.beginPath();
-    ctx.arc(anchorX, anchorY, 5, 0, Math.PI * 2);
-    ctx.fill();
-
-    // MATH
-    ctx.globalCompositeOperation = 'destination-over';
-    ctx.strokeStyle = '#fff';
-        drawLine(line1);
-        drawLine(line2);
-    ctx.strokeStyle = '#f0f';
-        drawTrail(trail1);
-    ctx.fillStyle = '#f0f';
-    ctx.globalCompositeOperation = 'source-over';
-        drawCircle(circ1);
-        drawCircle(circ2);
-
-    // PHYSICS
-    ctx.save();
-    ctx.translate(0, viewHeight);
-    ctx.scale(physicsScale, -physicsScale);
-
-    ctx.globalCompositeOperation = 'destination-over';
-    ctx.lineWidth = 1 / physicsScale;
-    ctx.strokeStyle = '#fff';
-        drawLine(line3);
-        drawLine(line4);
-    ctx.strokeStyle = '#0ff';
-        drawTrail(trail2);
-    ctx.fillStyle = '#0ff';
-    ctx.globalCompositeOperation = 'source-over';
-        drawCircle(circ3);
-        drawCircle(circ4);
-
-    ctx.restore();
-}
-
-function drawCircle(c) {
-    ctx.beginPath();
-    ctx.arc(c.x, c.y, c.radius, 0, 2 * Math.PI, false);
-    ctx.fill();
-}
-
-function drawLine(l) {
-    ctx.beginPath();
-    ctx.moveTo(l.x0, l.y0);
-    ctx.lineTo(l.x, l.y);
-    ctx.stroke();
-}
-
-function drawTrail(t) {
-    ctx.beginPath();
-    ctx.moveTo(t[0].x, t[0].y);
-
-    for (var i = 1; i < t.length; i++) {
-        ctx.lineTo(t[i].x, t[i].y);
-    }
-
-    ctx.stroke();
-}
-
-window.onload = function() {
-    initDrawingCanvas();
-    initGraphics();
-    initPhysics();
-    requestAnimationFrame(loop);
-};
-
-function loop() {
-    update();
-    draw();
-    time += timeStep;
-    requestAnimationFrame(loop);
-}
-
-// GUI
-var dat = new dat.GUI();
-var settings = {
-    length1:120,
-    length2:120,
-    mass1:10,
-    mass2:10,
-    mathTimeScale:5.6,
-    apply:function() {
-
-        length1 = this.length1;
-        length2 = this.length2;
-        mass1 = this.mass1;
-        mass2 = this.mass2;
-        mathTimeScale = this.mathTimeScale;
-        Theta1 = Math.PI * 0.5;
-        Theta2 = Math.PI * 0.5;
-        d2Theta1 = 0;
-        d2Theta2 = 0;
-        dTheta1 = 0;
-        dTheta2 = 0;
-        world.removeBody(body0);
-        world.removeBody(body1);
-        world.removeBody(body2);
-        world.removeConstraint(dc1);
-        world.removeConstraint(dc2);
-
-        initGraphics();
-        initPhysics();
-    }
-};
-
-dat.add(settings, 'length1', 10, 200);
-dat.add(settings, 'length2', 10, 200);
-dat.add(settings, 'mass1', 1, 30);
-dat.add(settings, 'mass2', 1, 30);
-dat.add(settings, 'mathTimeScale', 1, 10);
-dat.add(settings, 'apply');
-dat.close();
-</script>
+    <script src="script.js"></script>
 </body>
 </html>
