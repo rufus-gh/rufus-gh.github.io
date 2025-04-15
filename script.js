@@ -35,6 +35,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     
+    // Handle project card links
+    const projectLinks = document.querySelectorAll('.project-links a');
+    projectLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.stopPropagation(); // Prevent the parent card click event from firing
+        });
+    });
+    
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
