@@ -1,50 +1,49 @@
 # Weather Dashboard
 
-A responsive weather dashboard application that displays current weather conditions and a 5-day forecast for cities around the world. Data is provided by the OpenWeatherMap API.
+A responsive weather dashboard application that displays current weather conditions and forecasts for cities around the world. This project demonstrates front-end integration with weather data APIs.
 
 ## Features
 
-- Search for weather by city name
-- View current weather conditions
-- See 5-day weather forecast
+- City-based weather search functionality
+- Current weather conditions display
+- 5-day weather forecast
 - Saved locations for quick access
-- Interactive weather map
-- Mobile-responsive design
+- Interactive weather map using Leaflet.js
+- Responsive design for all devices
 
-## Setup Instructions
+## Components
 
-### API Key Configuration
-
-This project requires an OpenWeatherMap API key to function. For security reasons, the API key is not included in the repository.
-
-To set up your own API key:
-
-1. Sign up for a free API key at [OpenWeatherMap](https://home.openweathermap.org/users/sign_up)
-2. Copy the file `config.example.js` to a new file named `config.js`
-3. Replace `'YOUR_OPENWEATHERMAP_API_KEY_HERE'` with your actual API key
-
-```javascript
-// config.js
-const config = {
-  OPENWEATHER_API_KEY: 'your-api-key-here'
-};
-```
-
-**Note:** The `config.js` file is listed in `.gitignore` to prevent accidentally committing your API key to version control.
+- Search interface for finding cities
+- Current weather panel with detailed information
+- 5-day forecast display with daily summaries
+- Saved locations sidebar for frequently checked places
+- Weather information cards with explanations
+- Interactive map visualization
 
 ## Technologies Used
 
 - HTML5
-- CSS3
-- JavaScript (ES6+)
-- Leaflet.js for maps
-- FontAwesome for icons
-- OpenWeatherMap API
+- CSS3 with responsive design
+- JavaScript for dynamic content and API integration
+- Font Awesome icons
+- Leaflet.js for map functionality
+- OpenWeatherMap API for weather data
 
-## Project Structure
+## Implementation Notes
 
-- `index.html` - Main HTML file
-- `styles.css` - CSS stylesheet
-- `app.js` - Main application logic
-- `config.js` - API key configuration (not in repo)
-- `components/weatherMap.js` - Map component logic
+- Weather data is fetched from the OpenWeatherMap API
+- Locations can be saved to local storage for persistence
+- Map visualization shows weather conditions geographically
+- Error handling for failed API requests or invalid cities
+- Loading states provide feedback during API calls
+
+## Setup
+
+To use this application with live data:
+1. Sign up for a free API key at [OpenWeatherMap](https://openweathermap.org/api)
+2. Add your API key to the config.js file
+3. Open index.html in your browser
+
+## Usage
+
+This weather dashboard can be used for personal weather tracking, travel planning, or as a component in larger applications that require weather information.
