@@ -340,6 +340,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="recipe-info">
                     <h3>${recipe.name}</h3>
                     <p>${recipe.description}</p>
+                    <div class="recipe-tags">
+                        ${recipe.tags.map(tag => `<span class="recipe-tag">${tag}</span>`).join('')}
+                    </div>
                     <div class="recipe-meta">
                         <span><i class="fas fa-clock"></i> ${recipe.prepTime + recipe.cookTime} mins</span>
                         <span><i class="fas fa-user-friends"></i> ${recipe.servings} servings</span>
