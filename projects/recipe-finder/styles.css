@@ -200,7 +200,7 @@ header {
     margin-bottom: 12px;
 }
 
-.recipe-info .recipe-tag {
+.recipe-tag {
     background-color: #f1f1f1;
     color: var(--primary-color);
     font-size: 0.75rem;
@@ -247,13 +247,15 @@ header {
 
 .modal-content {
     background-color: white;
-    margin: 50px auto;
+    margin: 40px auto;
     padding: 30px;
     border-radius: var(--border-radius);
     max-width: 800px;
     width: 90%;
     position: relative;
     box-shadow: var(--box-shadow);
+    max-height: 85vh;
+    overflow-y: auto;
 }
 
 .close-btn {
@@ -264,42 +266,94 @@ header {
     cursor: pointer;
     color: var(--gray-color);
     transition: var(--transition);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    z-index: 10;
 }
 
 .close-btn:hover {
     color: var(--primary-color);
+    background-color: #f0f0f0;
 }
 
 .recipe-details {
-    padding: 20px 0;
+    padding: 10px 0;
 }
 
 .recipe-details h2 {
     margin-bottom: 15px;
     color: var(--primary-color);
+    font-size: 2rem;
+    text-align: center;
+    padding-bottom: 8px;
+    position: relative;
 }
 
-recipe-details img {
+.recipe-details h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+.recipe-details .recipe-image-container {
     width: 100%;
+    height: 300px;
+    margin: 20px 0;
     border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-details img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: var(--border-radius);
+    transition: transform 0.5s ease;
+}
+
+.recipe-details .recipe-image-container:hover img {
+    transform: scale(1.03);
+}
+
+.recipe-details .recipe-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
     margin-bottom: 20px;
+    color: var(--gray-color);
+    text-align: center;
+    font-style: italic;
 }
 
 .recipe-details .recipe-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    margin-bottom: 20px;
+    margin: 25px 0;
+    justify-content: center;
 }
 
 .recipe-details .recipe-tag {
     background-color: #f0f0f0;
-    padding: 5px 12px;
+    padding: 6px 15px;
     border-radius: 20px;
     font-size: 0.9rem;
     color: var(--primary-color);
     font-weight: 500;
     transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
 }
 
 .recipe-details .recipe-tag:hover {
@@ -307,22 +361,73 @@ recipe-details img {
     color: white;
 }
 
+#recipe-details .recipe-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 25px 0;
+    justify-content: start;
+}
+
+.recipe-meta span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.recipe-details .recipe-meta {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin: 25px 0;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    text-align: center;
+}
+
+.recipe-details .recipe-meta span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.recipe-details .recipe-meta i {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+    color: var(--primary-color);
+}
+
 .recipe-details h3 {
-    margin: 20px 0 10px;
+    margin: 30px 0 15px;
     color: var(--dark-color);
+    font-size: 1.4rem;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #f0f0f0;
 }
 
 .recipe-details ul {
-    margin-left: 20px;
+    margin: 0 0 25px 20px;
 }
 
-recipe-details ul li {
-    margin-bottom: 8px;
-    list-style-type: disc;
-}
-
-recipe-details ol li {
+.recipe-details ul li {
     margin-bottom: 10px;
+    list-style-type: disc;
+    line-height: 1.5;
+}
+
+.recipe-details ol {
+    margin: 0 0 25px 20px;
+    counter-reset: item;
+}
+
+.recipe-details ol li {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    position: relative;
+    padding-left: 5px;
 }
 
 /* Loading Animation */

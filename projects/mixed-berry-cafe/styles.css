@@ -525,6 +525,13 @@ section {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: var(--shadow);
+    height: 550px; /* Added fixed height */
+}
+
+.special-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the area properly */
 }
 
 .special-price {

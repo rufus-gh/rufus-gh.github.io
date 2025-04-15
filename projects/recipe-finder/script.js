@@ -415,18 +415,38 @@ document.addEventListener('DOMContentLoaded', () => {
     function showRecipeDetails(recipe) {
         recipeDetails.innerHTML = `
             <h2>${recipe.name}</h2>
-            <img src="${recipe.image}" alt="${recipe.name}">
-            <p>${recipe.description}</p>
+            
+            <div class="recipe-image-container">
+                <img src="${recipe.image}" alt="${recipe.name}">
+            </div>
+            
+            <p class="recipe-description">${recipe.description}</p>
             
             <div class="recipe-tags">
                 ${recipe.tags.map(tag => `<span class="recipe-tag">${tag}</span>`).join('')}
             </div>
             
             <div class="recipe-meta">
-                <span><i class="fas fa-clock"></i> Prep: ${recipe.prepTime} mins</span>
-                <span><i class="fas fa-fire"></i> Cook: ${recipe.cookTime} mins</span>
-                <span><i class="fas fa-user-friends"></i> Serves: ${recipe.servings}</span>
-                <span><i class="fas fa-chart-line"></i> Difficulty: ${recipe.difficulty}</span>
+                <span>
+                    <i class="fas fa-clock"></i>
+                    <strong>Prep Time</strong>
+                    ${recipe.prepTime} mins
+                </span>
+                <span>
+                    <i class="fas fa-fire"></i>
+                    <strong>Cook Time</strong>
+                    ${recipe.cookTime} mins
+                </span>
+                <span>
+                    <i class="fas fa-user-friends"></i>
+                    <strong>Serves</strong>
+                    ${recipe.servings}
+                </span>
+                <span>
+                    <i class="fas fa-chart-line"></i>
+                    <strong>Difficulty</strong>
+                    ${recipe.difficulty}
+                </span>
             </div>
             
             <h3>Ingredients</h3>

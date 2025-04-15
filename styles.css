@@ -426,7 +426,7 @@ footer {
 .social-icons a {
     color: white;
     font-size: 1.5rem;
-    margin-left: 15px;
+    margin-right: -25px;
     transition: var(--transition);
 }
 

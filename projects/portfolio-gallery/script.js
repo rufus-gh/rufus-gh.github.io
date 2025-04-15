@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: 'Mountain Sunrise',
             description: 'A breathtaking view of the sun rising over mountain peaks, casting golden light across the valley.',
             category: 'nature',
-            image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
+            image: 'https://images.unsplash.com/photo-1506880648420-aafaa650d147?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
             tags: ['mountains', 'sunrise', 'landscape', 'dawn']
         },
         {
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: 'Portrait in Natural Light',
             description: 'A candid portrait capturing genuine emotion, shot with natural window light for a soft, flattering effect.',
             category: 'people',
-            image: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
+            image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
             tags: ['portrait', 'people', 'lighting', 'emotion']
         },
         {
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: 'Ocean Waves at Sunset',
             description: 'Powerful ocean waves crash against the shore as the sun sets on the horizon, creating a dramatic seascape.',
             category: 'nature',
-            image: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
+            image: 'https://plus.unsplash.com/premium_photo-1690372181721-200f879023e3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
             tags: ['ocean', 'sunset', 'waves', 'seascape']
         },
         {
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: 'Historic Building',
             description: 'Ornate details and classic design elements showcase the rich history and craftsmanship of this heritage structure.',
             category: 'architecture',
-            image: 'https://images.unsplash.com/photo-1503248947681-3198a7abfcc9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
+            image: 'https://images.unsplash.com/photo-1736514410616-4680f8ac21e9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
             tags: ['historic', 'building', 'heritage', 'classic']
         },
         {
@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: 'Forest Waterfall',
             description: 'A serene waterfall hidden deep in a lush forest, surrounded by moss-covered rocks and vibrant greenery.',
             category: 'nature',
-            image: 'https://images.unsplash.com/photo-1565118531796-763e5082d113?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
+            image: 'https://images.unsplash.com/photo-1523224949444-170258978eef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
             tags: ['waterfall', 'forest', 'nature', 'peaceful']
         },
         {
@@ -86,19 +86,11 @@ document.addEventListener('DOMContentLoaded', () => {
             title: 'Gadget Collection',
             description: 'A carefully arranged collection of modern tech gadgets and accessories showcasing current technology trends.',
             category: 'technology',
-            image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
+            image: 'https://images.unsplash.com/photo-1515940175183-6798529cb860?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
             tags: ['gadgets', 'tech', 'devices', 'modern']
         },
         {
             id: 12,
-            title: 'Cultural Celebration',
-            description: 'A vibrant scene capturing the joy and tradition of a cultural celebration with authentic costumes and expressions.',
-            category: 'people',
-            image: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
-            tags: ['cultural', 'celebration', 'tradition', 'festival']
-        },
-        {
-            id: 13,
             title: 'Desert Landscape',
             description: 'The stark beauty of desert sand dunes, shaped by wind and light to create natural sculptural forms.',
             category: 'nature',
@@ -106,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
             tags: ['desert', 'dunes', 'landscape', 'minimal']
         },
         {
-            id: 14,
+            id: 13,
             title: 'Futuristic Design',
             description: 'Innovative architectural design pushing boundaries with unconventional shapes and sustainable materials.',
             category: 'architecture',
@@ -114,11 +106,11 @@ document.addEventListener('DOMContentLoaded', () => {
             tags: ['futuristic', 'design', 'innovation', 'architecture']
         },
         {
-            id: 15,
+            id: 14,
             title: 'Retro Computing',
             description: 'A nostalgic look at vintage computing technology that paved the way for our modern digital world.',
             category: 'technology',
-            image: 'https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
+            image: 'https://images.unsplash.com/photo-1663770114127-4f61cb62b56d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
             tags: ['retro', 'vintage', 'computer', 'nostalgia']
         }
     ];
