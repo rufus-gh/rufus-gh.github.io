@@ -1,230 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>HSC Software Flashcards</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HSC Flashcards</title>
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: #121212;
-      color: #eee;
+      background-color: #121212;
+      color: #f5f5f5;
       display: flex;
-      flex-direction: column;
+      justify-content: center;
       align-items: center;
-      padding: 1rem;
       height: 100vh;
+      overflow: hidden;
+      flex-direction: column;
     }
-
-    h1 {
-      font-size: 1.3rem;
-      text-align: center;
-      margin-bottom: 0.5rem;
-      color: #fff;
-    }
-
-    #card {
+    .card {
       background: #1e1e1e;
-      color: #fff;
-      border-radius: 1rem;
-      box-shadow: 0 0 20px rgba(0,0,0,0.5);
-      width: 100%;
+      border-radius: 12px;
+      padding: 24px;
+      width: 90vw;
       max-width: 400px;
-      padding: 2rem;
       text-align: center;
-      font-size: 1.1rem;
-      transition: all 0.4s ease;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
       cursor: pointer;
       user-select: none;
-      min-height: 160px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
     }
-
-    #controls {
-      margin-top: 1rem;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
+    .highlight {
+      color: #ffcc00;
+      font-weight: bold;
     }
-
+    .hidden {
+      background-color: #333;
+      color: #333;
+      border-radius: 4px;
+      padding: 0 4px;
+      transition: color 0.3s ease;
+    }
+    .hidden.revealed {
+      color: #00e676;
+    }
+    .buttons {
+      margin-top: 20px;
+      display: flex;
+      gap: 20px;
+    }
     button {
       background: #333;
-      color: #fff;
       border: none;
-      border-radius: 0.5rem;
-      padding: 0.6rem 1.2rem;
-      font-size: 1rem;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
       cursor: pointer;
-      transition: background 0.3s;
+      font-size: 16px;
     }
-
     button:hover {
       background: #444;
-    }
-
-    select {
-      margin: 0.5rem 0 1rem 0;
-      background: #222;
-      color: #fff;
-      padding: 0.5rem;
-      border-radius: 0.4rem;
-      border: none;
-      width: 100%;
-      max-width: 400px;
-      font-size: 1rem;
-    }
-
-    .fade {
-      animation: fadeIn 0.3s ease;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: scale(0.97); }
-      to { opacity: 1; transform: scale(1); }
     }
   </style>
 </head>
 <body>
-  <h1>HSC Software Engineering</h1>
-  <select id="sectionSelect">
-    <option value="all">All Sections</option>
-  </select>
-
-  <div id="card" onclick="flipCard()">Loading...</div>
-
-  <div id="controls">
-    <button onclick="prevCard()">←</button>
-    <button onclick="nextCard()">→</button>
+  <div class="card" id="card" onclick="flipCard()"></div>
+  <div class="buttons">
+    <button onclick="prevCard()">⟵</button>
+    <button onclick="nextCard()">⟶</button>
   </div>
 
   <script>
-    const cards = {
-      "1_Introduction_and_Benefits": [
-        ["What are the three pillars of secure software?", "Confidentiality, Integrity, Availability"],
-        ["What risks does secure software reduce?", "Data breaches, identity theft, downtime"],
-        ["What are the benefits of secure design?", "Compliance, customer trust, business continuity"]
-      ],
-      "2_Software_Development_Process": [
-        ["What are the stages of the secure software lifecycle?", "Requirements, specification, design, development, integration, testing, installation, maintenance"],
-        ["What is defined during the requirements gathering stage?", "Security goals and potential threats"],
-        ["What does threat modelling identify?", "Attack surfaces and mitigation strategies"]
-      ],
-      "3_Security_Concepts_and_Features": [
-        ["What is the difference between authentication and authorisation?", "Authentication confirms identity; authorisation controls access"],
-        ["What does hashing ensure?", "Data integrity by detecting tampering"],
-        ["Why is encryption used?", "To protect data confidentiality at rest and in transit"],
-        ["What does RBAC stand for and what does it do?", "Role-Based Access Control; limits access based on user roles"],
-        ["How is availability maintained?", "Backups, failover systems, and load balancing"]
-      ],
-      "4_Defensive_Programming": [
-        ["What is input validation?", "Checking data meets expected format before processing"],
-        ["What is sanitisation used for?", "Removing dangerous characters to prevent injection attacks"],
-        ["Why use generic error messages?", "To prevent information leakage to attackers"],
-        ["What are fail-safe defaults?", "Denying access unless explicitly allowed"]
-      ],
-      "5_Testing_and_Evaluation": [
-        ["What is SAST?", "Static Application Security Testing — analyzes source code"],
-        ["What is DAST?", "Dynamic Application Security Testing — tests live apps"],
-        ["What is penetration testing?", "Simulates real attacks to discover flaws"],
-        ["Why are code reviews important?", "To identify security flaws early"]
-      ],
-      "6_APIs_and_Sessions": [
-        ["How can APIs be secured?", "OAuth, API tokens, rate limiting"],
-        ["Why should sessions expire after inactivity?", "To prevent hijacking"],
-        ["What cookie attributes enhance security?", "HttpOnly, Secure, short expiry"]
-      ],
-      "7_Privacy_and_Legal": [
-        ["What privacy laws mandate data protection?", "GDPR, Australian Privacy Act"],
-        ["When must users give consent?", "Before data collection and processing"],
-        ["What is the GDPR 72-hour rule?", "Breach must be reported within 72 hours"]
-      ],
-      "8_User_Considerations": [
-        ["What user issues should security design consider?", "User errors and social engineering"],
-        ["What user behaviours should software encourage?", "Strong passwords and auto-updates"],
-        ["Why do users disable security features?", "For convenience, risking exposure"]
-      ],
-      "9_Business_and_Collaboration": [
-        ["How does security reduce business costs?", "Lower maintenance and legal liabilities"],
-        ["Why is collaboration beneficial for security?", "Brings diverse expertise and better risk detection"],
-        ["How does digital disruption affect security?", "Introduces new challenges and tools"]
-      ]
-    };
+    const cards = [
+      { type: 'basic', front: 'What is the CIA triad?', back: 'Confidentiality, Integrity, Availability' },
+      { type: 'basic', front: 'What is the purpose of input validation?', back: 'To ensure data meets expected format' },
+      { type: 'cloze', front: 'The core principles of security are <span class="hidden" onclick="this.classList.add(\'revealed\')">Confidentiality</span>, <span class="hidden" onclick="this.classList.add(\'revealed\')">Integrity</span>, and <span class="hidden" onclick="this.classList.add(\'revealed\')">Availability</span>.' },
+      { type: 'cloze', front: 'Input <span class="hidden" onclick="this.classList.add(\'revealed\')">validation</span> protects against unexpected input formats.' },
+      { type: 'basic', front: 'What testing method simulates real-world attacks?', back: 'Penetration testing' },
+      { type: 'cloze', front: 'Encryption protects data in <span class="hidden" onclick="this.classList.add(\'revealed\')">transit</span> and at <span class="hidden" onclick="this.classList.add(\'revealed\')">rest</span>.' },
+    ];
 
-    let currentSection = "all";
-    let allCards = [];
     let currentIndex = 0;
-    let showingQuestion = true;
-
-    const sectionSelect = document.getElementById("sectionSelect");
-    const cardEl = document.getElementById("card");
-
-    for (let section in cards) {
-      const opt = document.createElement("option");
-      opt.value = section;
-      opt.textContent = section.replace(/^\d+_/, '').replace(/_/g, ' ');
-      sectionSelect.appendChild(opt);
-    }
-
-    sectionSelect.addEventListener("change", () => {
-      currentSection = sectionSelect.value;
-      loadCards();
-    });
-
-    function loadCards() {
-      allCards = [];
-      for (let section in cards) {
-        if (currentSection === "all" || currentSection === section) {
-          allCards.push(...cards[section]);
-        }
-      }
-      shuffle(allCards);
-      currentIndex = 0;
-      showingQuestion = true;
-      showCard();
-    }
+    let flipped = false;
 
     function showCard() {
-      const [q, a] = allCards[currentIndex];
-      cardEl.textContent = showingQuestion ? q : a;
-      cardEl.classList.remove("fade");
-      void cardEl.offsetWidth;
-      cardEl.classList.add("fade");
+      const card = cards[currentIndex];
+      const cardEl = document.getElementById('card');
+      if (card.type === 'basic') {
+        cardEl.innerHTML = flipped
+          ? `<div class='highlight'>${card.back}</div>`
+          : card.front;
+      } else {
+        cardEl.innerHTML = card.front;
+      }
     }
 
     function flipCard() {
-      showingQuestion = !showingQuestion;
-      showCard();
+      if (cards[currentIndex].type === 'basic') {
+        flipped = !flipped;
+        showCard();
+      }
     }
 
     function nextCard() {
-      currentIndex = (currentIndex + 1) % allCards.length;
-      showingQuestion = true;
+      currentIndex = (currentIndex + 1) % cards.length;
+      flipped = false;
       showCard();
     }
 
     function prevCard() {
-      currentIndex = (currentIndex - 1 + allCards.length) % allCards.length;
-      showingQuestion = true;
+      currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+      flipped = false;
       showCard();
     }
 
-    function shuffle(array) {
-      for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-      }
-    }
-
-    document.addEventListener("keydown", e => {
-      if (e.key === "ArrowRight") nextCard();
-      if (e.key === "ArrowLeft") prevCard();
-      if (e.key === " ") flipCard();
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight') nextCard();
+      if (e.key === 'ArrowLeft') prevCard();
+      if (e.key === ' ') flipCard();
     });
 
-    loadCards();
+    showCard();
   </script>
 </body>
 </html>
