@@ -7,10 +7,16 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" />
   <style>
+    body {
+      background-color: #1a1a1a;
+      margin: 0;
+      padding: 0;
+    }
     #network {
       width: 100%;
       height: 100vh;
-      border: 1px solid lightgray;
+      border: 1px solid #333;
+      background-color: #2d2d2d;
     }
   </style>
 </head>
@@ -60,13 +66,33 @@
     const data = { nodes, edges };
     const options = {
       interaction: { hover: true },
+      nodes: {
+        color: {
+          background: '#4a4a4a',
+          border: '#666',
+          highlight: {
+            background: '#5a5a5a',
+            border: '#888'
+          }
+        },
+        font: {
+          color: '#ffffff'
+        }
+      },
       edges: {
         arrows: {
           to: { enabled: true }
         },
+        color: {
+          color: '#cccccc',
+          highlight: '#ffffff'
+        },
         font: {
           align: 'middle',
-          size: 10
+          size: 10,
+          color: '#ffffff',
+          background: 'rgba(45,45,45,0.9)',
+          strokeWidth: 0
         }
       },
       physics: {
